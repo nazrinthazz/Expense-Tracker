@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Chart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>Expense Analysis</h1>
+
+<div class="chart-container">
+    <select id="chartFilter" onchange="updateChart()">
+        <option value="daily">Daily</option>
+        <option value="monthly">Monthly</option>
+        <option value="category">By Category</option>
+    </select>
+
+    <canvas id="expenseChart"></canvas>
+
+    <button class="btn-secondary" onclick="goBack()">Back</button>
+</div>
+
+<script src="chart.js"></script>
+</body>
+</html>
+
