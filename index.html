@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>💸 Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>💸 Expense Tracker</h1>
+
+<div class="container">
+
+  <!-- LEFT: Add Expense -->
+  <div class="panel left">
+    <h2>Add Expense</h2>
+
+    <input id="amount" type="number" placeholder="Amount (INR)">
+
+    <select id="category">
+      <option value="Food">Food</option>
+      <option value="Travel">Travel</option>
+      <option value="Custom">Create Custom Category</option>
+    </select>
+
+    <input id="date" type="date">
+    <input id="tags" placeholder="Tags (comma separated)">
+
+    <div class="button-group">
+    <button class="btn-primary" onclick="addExpense()">➕ Add Expense</button>
+</div>
+
+  </div>
+
+  <!-- CENTER: Expense List -->
+  <div class="panel center">
+    <h2>Expenses</h2>
+    <ul id="expenseList"></ul>
+    <div class="expense-row">
+    <div class="expense-info">
+  </div>
+</div>
+
+  </div>
+
+  <!-- RIGHT: Summary -->
+  <div class="panel right">
+    <h2>Total</h2>
+    <div id="total">₹0</div>
+
+    <button class="btn-primary" onclick="openChart()">📊 Generate Chart</button>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
